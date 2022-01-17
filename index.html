@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora da Dany</title>
+    </head>
+
+    <body>
+
+        <div id="header">
+            <div><img src="/assets/umbler-logo-png.png" alt=""></div>
+            <div>
+                <h1>Calculadora de Créditos Umbler</h1>
+            </div>
+
+        </div>
+
+        <div id="corpo">
+
+            <div id="containet-datas">
+
+
+                <div id="vencimento">
+                    <p>Vencimento</p>
+                    <input type="date" name="" id="dataInicial">
+                </div>
+
+                <div id="final">
+
+                    <div>
+                        <p>Até:</p>
+                        <input type="date" name="" id="dataFinal">
+                    </div>
+
+                    <div id="btnSomarPeriodo">
+                        <button onclick="somarMensal()">
+                            MENSAL
+                        </button>
+
+                        <button onclick="somarBimestral()">
+                            BIMESTRAL
+                        </button>
+
+                        <button onclick="somarTrimestral()">
+                            TRIMESTRAL
+                        </button>
+
+                        <button onclick="somarSemestral()">
+                            SEMESTRAL
+                        </button>
+
+                        <button onclick="somarAnual()">
+                            ANUAL
+                        </button>
+                    </div>
+
+                </div>
+
+                <div id="contabilizacao">
+                    <p>Contabilização:</p>
+                    <input type="date" name="" id="dataContabilizacao">
+                    <button onclick="noVencimento()" id="BtnnoVencimento">NO VENCIMENTO</button>
+                </div>
+
+                <div id="usadoAte">
+                    <p>Finalização:</p>
+                    <input type="date" name="" id="dataUsado">
+                    <button onclick="hoje()">HOJE</button>
+
+                </div>
+
+
+
+            </div>
+
+            <div id="inputBtn">
+                <p id="TextValorDoPlano">Valor do Plano:</p>
+                <input type="number" id="valordoplano"  class="valordoplano" placeholder="R$ 000,00">
+                <button onclick="main()">CALCULAR</button>
+            </div>
+
+
+            <div id="container-infos">
+
+                <hr style="width: 100%; height: 2px;  background: rgba(59, 125, 247, 0.5);border-radius: 50px; border: none; "> 
+
+                <div id="saldoRestante">
+                    <p>SALDO RESTANTE:</p>
+                    <p >R$ <span id="saldoRestanteValue">0,00</span></p>
+
+                </div>
+
+                <div id="infos">
+                    <p>VALOR DIÁRIO: R$ <b><span id="vDia">0</span> </b></p>
+                    <p>SALDO USADO: R$ <b><span id="saldoUsado">0</span> </b></p>
+
+                    <p>DIAS DO PLANO: <b></b><span id="diasPlano">0</span></b>  </p>
+                    <p>DIAS USADO: <b><span id="diasUsado">0</span></b>  </p>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="main2.js"></script>
+    </body>
+
+
+
+</html>
+
+
