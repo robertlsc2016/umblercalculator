@@ -2,8 +2,6 @@
 var moment = require('moment');
 moment().locale('pt-br')
 
-// $('.valordoplano').mask('000.000.000,0', {reverse: true});
-
 main = () => {
 
     if(document.getElementById('dataInicial').value !== ''){
@@ -76,9 +74,7 @@ somarMensal = () => {
     if(document.getElementById('dataInicial').value == ''){
         alert('É NECESSÁRIO INFORMAR A DATA DE VENCIMENTO ANTES')
     } else{
-        // .subtract(1, 'day')
         const dataAtualizar = moment(document.getElementById('dataInicial').value).add(1, 'months').format('YYYY-MM-DD')
-        // console.log(moment(dataAtualizar).diff(1, 'days').format('YYYY-MM-DD') )
         document.getElementById('dataFinal').value = dataAtualizar
     }
 
@@ -92,7 +88,6 @@ somarBimestral = () => {
         alert('É NECESSÁRIO INFORMAR A DATA DE VENCIMENTO ANTES')
     } else{
         const dataAtualizar = moment(document.getElementById('dataInicial').value).add(2, 'months').format('YYYY-MM-DD')
-        // console.log(moment(dataAtualizar).diff(1, 'days').format('YYYY-MM-DD') )
         document.getElementById('dataFinal').value = dataAtualizar
     }
 
@@ -105,7 +100,6 @@ somarTrimestral = () => {
         
     } else{
         const dataAtualizar = moment(document.getElementById('dataInicial').value).add(3, 'months').format('YYYY-MM-DD')
-        // console.log(moment(dataAtualizar).diff(1, 'days').format('YYYY-MM-DD') )
         document.getElementById('dataFinal').value = dataAtualizar
     }
 
@@ -117,7 +111,6 @@ somarSemestral = () => {
         alert('É NECESSÁRIO INFORMAR A DATA DE VENCIMENTO ANTES')
     } else{
         const dataAtualizar = moment(document.getElementById('dataInicial').value).add(6, 'months').format('YYYY-MM-DD')
-        // console.log(moment(dataAtualizar).diff(1, 'days').format('YYYY-MM-DD') )
         document.getElementById('dataFinal').value = dataAtualizar
     }
 
@@ -127,7 +120,6 @@ somarSemestral = () => {
 somarAnual = () => {
 
     const dataAtualizar = moment(document.getElementById('dataInicial').value).add(1, 'year').format('YYYY-MM-DD')
-    // console.log(moment(dataAtualizar).diff(1, 'days').format('YYYY-MM-DD') )
     document.getElementById('dataFinal').value = dataAtualizar
 
 }
@@ -142,6 +134,7 @@ noVencimento = () => {
     }
     
 }
+
 hoje = () => {
     document.getElementById('dataUsado').value = moment().format('YYYY-MM-DD')
 }
